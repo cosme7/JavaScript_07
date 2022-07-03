@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.riot-container{
+    width: 100%;
+    height: 48.7vw;
+    display: flex;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.info-container{
+    padding: 4vw 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5vw;
+}
+
+.riot-fig{
+    width: 100%;
+}
+
+.riot-img{
+    width: 100%;
+    height: 45vw;
+}
+
+/* LOGO BOX */
+.logo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.logo-box img{
+    width: 3vw;
+}
+
+.logo-box h1{
+    width: 8ch;
+    font-size: 1.5vw;
+    color: #ea022a;
+    text-transform: uppercase;
+}
+
+/* INFO WRAPPER */
+.info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+/* INFO BOX */
+.info-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    position: relative;
+}
+
+.info-box p{
+    font-size: 1vw;
+    font-weight: 700;
+    color: #2C2B2B;
+}
+
+.login-input,
+.senha-input{
+    width: 20vw;
+    height: 4vw;
+    font-size: 1.3vw;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 1vw 0 0 1vw;
+    background-color: #e8e6e6;
+    outline: none;
+    border: none;
+}
+
+.login-label,
+.senha-label{
+    font-size: 1vw;
+    font-weight: 500;
+    color: #716E6E;
+    transition: 0.2s ease all;
+    opacity: .5;
+    position: absolute;
+    pointer-events: none;
+    cursor: text;
+}
+
+.login-label{
+    top: 3.5vw;
+    transform: translateX(-60%);
+}
+
+.login-input:focus-within ~ .login-label,
+.login-input:valid ~ .login-label{
+    font-size: .7vw;   
+    font-weight: 700;
+    top: 2.5vw;
+    transform: translateX(-6vw);
+}
+
+.senha-label{
+    bottom: 1.5vw;
+    transform: translateX(-7.5vw);
+}
+
+.senha-input:focus-within ~ .senha-label,
+.senha-input:valid ~ .senha-label{
+    font-size: .7vw;  
+    font-weight: 700; 
+    bottom: 3vw;
+    transform: translateX(-8vw);
+}
+
+/* SOCIAL BOX */
+.social-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.facebook-fig, .google-fig, .apple-fig{
+    width: 5vw;
+    height: 2vw;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-box img{
+    width: 1.5vw;
+}
+
+.facebook-fig{
+    background-color: #2051FF;
+}
+
+.google-fig{
+    background-color: #8A0000;
+}
+
+.apple-fig{
+    background-color: #000000;
+}
+
+/* LOGIN BOX */
+.login-box{
+    padding-top: 1vw;
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+}
+
+.login-check{
+    width: 1vw;
+    height: 1vw;
+    border-radius: 5px;
+    background-color: #e8e6e6;
+    border: none;
+}
+
+.login-box label{
+    font-size: .8vw;
+    font-weight: 700;
+}
+
+/* BTN WRAPPER BOX */
+.btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.btn-next{
+    padding: .5vw;
+    border-radius: .6vw;
+    opacity: .2;
+    background-color: #ff002e;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-opacity{
+    opacity: 1;
+}
+
+.btn-next img{
+    width: 2vw;
+}
+
+.nav-acc p{
+    line-height: 1.5vw;
+    text-align: center;
+}
+
+.nav-acc a{
+    font-size: 1vw;
+    font-weight: 600;
+    color: #A6A6A6;
+}
+
+@media (max-width: 650px){
+    .info-container{
+        width: 100%;
+        padding: 8vw 2vw;
+        gap: 4.5vw;
+    }
+
+    .riot-fig{
+        position: absolute;
+        z-index: -1;
+    }
+
+    .riot-img{
+        width: 100%;
+        height: 53vw;
+        opacity: 0;
+    }
+
+    .riot-scale{
+        opacity: .4;
+    }
+
+    /* LOGO MOBILE */
+     .logo-box img{
+        width: 15vw;
+    }
+
+    .logo-box h1{
+        font-size: 8vw;
+    }
+
+    /* INFO BOX */
+    .info-wrapper{
+        gap: 4vw;
+    }
+
+    .info-box{
+        gap: 2vw;
+    }
+
+    .info-box p{
+        font-size: 2.5vw;
+        font-weight: 900;
+    }
+
+    .login-input,
+    .senha-input{
+        width: 90vw;
+        height: 6vw;
+        font-size: 2vw;
+        padding: 2vw 0 0 1vw;
+    }
+
+    .login-label,
+    .senha-label{
+        font-size: 2vw;
+        font-weight: 500;
+        color: #716E6E;
+        opacity: .5;
+    }
+
+    .login-label{
+        top: 6.5vw;
+        transform: translateX(-35vw);
+    }
+
+    .login-input:focus-within ~ .login-label,
+    .login-input:valid ~ .login-label{
+        font-size: 1.5vw; 
+        top: 6vw;
+        transform: translateX(-37.5vw);
+    }
+
+    .senha-label{
+        bottom: 2vw;
+        transform: translateX(-40.5vw);
+    }
+
+    .senha-input:focus-within ~ .senha-label,
+    .senha-input:valid ~ .senha-label{
+        font-size: 1.5vw;  
+        bottom: 3.5vw;
+        transform: translateX(-41.5vw);
+    }
+
+    /* SOCIAL BOX */
+    .social-wrapper{
+        padding: 0 3vw;
+    }
+
+    .facebook-fig, .google-fig, .apple-fig{
+        width: 20vw;
+        height: 6vw;
+    }
+
+    .social-box img{
+        width: 10vw;
+    }
+
+    /* LOGIN BOX */
+    .login-box{
+        padding-top: 2vw;
+        gap: 1vw;
+    }
+
+    .login-check{
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .login-box label{
+        font-size: 2.5vw;
+    }
+
+    /* BTN WRAPPER BOX */
+    .btn-wrapper{
+        padding-top: 6vw;
+        gap: 2vw;
+    }
+
+    .btn-next{
+        padding: 1.5vw;
+        border-radius: 2vw;
+    }
+
+    .btn-next img{
+        width: 5vw;
+    }
+
+    .nav-acc p{
+        line-height: 4vw;
+    }
+
+    .nav-acc a{
+        font-size: 2.5vw;
+        font-weight: 700;
+        color: black;
+    }
+}
