@@ -161,6 +161,7 @@
     display: flex;
     align-items: center;
     gap: .5vw;
+    position: relative;
 }
 
 .login-check{
@@ -169,6 +170,20 @@
     border-radius: 5px;
     background-color: #e8e6e6;
     border: none;
+}
+
+.login-check::before{
+    content: "";
+    width: 1vw;
+    height: 1vw;
+    display: block;
+    position: absolute;
+    top: 1vw;
+    background-color: #e8e6e6;
+}
+
+.login-check:checked::before{
+    display: none;
 }
 
 .login-box label{
@@ -320,6 +335,12 @@
     .login-check{
         width: 3vw;
         height: 3vw;
+    }
+
+    .login-check::before{
+        width: 3vw;
+        height: 3vw;
+        top: 2vw;
     }
 
     .login-box label{
